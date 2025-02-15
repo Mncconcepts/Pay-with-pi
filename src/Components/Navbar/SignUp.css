@@ -1,0 +1,292 @@
+.bodyyy {
+    background: linear-gradient(to bottom, #76ddeb, #ffffff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+
+  .forms-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.384);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(141, 138, 138, 0.15);
+    text-align: center;
+  }
+  
+  .forms-header {
+    margin-bottom: 20px;
+  }
+  
+  .forms-header i {
+    font-size: 45px;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+  }
+  
+  .forms-header h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  
+  .forms-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .forms-group input {
+    width: 100%;
+    padding: 12px 45px 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .forms-group input:focus {
+    border-color: #4a90e2;
+  }
+  
+  .forms-group i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+  }
+  
+  .errors-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+  }
+  
+  .signup-button {
+    width: 100%;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background: #357abd;
+  }
+  
+  .forms-footer {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .forms-footer a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  .forms-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .forms-container {
+      max-width: 300px;
+    }
+  
+    .forms-header i {
+      font-size: 50px;
+    }
+  
+    .signup-button {
+      font-size: 14px;
+    }
+  }
+  
+.circles-loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #4caf50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.success-container {
+  text-align: center;
+}
+
+.load-complete .checkmarks {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  position: relative;
+  opacity: 0;
+  animation: checkmark 0.5s forwards 1.5s;
+}
+
+.checkmarks.draw::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  left: 8px;
+  top: 5px;
+}
+
+.success-container p {
+  font-size: 18px;
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.remember-forgot-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox-group input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+}
+
+.social-signup {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-signup p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Social Buttons Container */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap; /* Keep buttons in a single row */
+}
+
+/* Style for Social Buttons */
+.googlee-button,
+.facebook-button,
+.twitter-button {
+  width: 100px; /* Smaller button width */
+  padding: 6px; /* Reduce padding */
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 12px; /* Reduce font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+/* Icon Margin */
+.googlee-button i,
+.facebook-button i,
+.twitter-button i {
+  margin-right: 5px;
+}
+
+/* Button Colors */
+.googlee-button {
+  background-color: #db4437;
+}
+
+.facebook-button {
+  background-color: #1877f2;
+}
+
+.twitter-button {
+  background-color: #1da1f2;
+}
+
+/* Hover Effects */
+.googlee-button:hover {
+  background-color: #c1351d;
+}
+
+.facebook-button:hover {
+  background-color: #165ecf;
+}
+
+.twitter-button:hover {
+  background-color: #198ad8;
+}
+
+/* Ensure 3 buttons stay in one row on smaller screens */
+@media (max-width: 480px) {
+  .social-buttons {
+    flex-wrap: nowrap;
+  }
+
+  .googlee-button,
+  .facebook-button,
+  .twitter-button {
+    width: 90px; /* Further reduce button width */
+    font-size: 11px; /* Smaller text */
+    padding: 5px;
+  }
+}

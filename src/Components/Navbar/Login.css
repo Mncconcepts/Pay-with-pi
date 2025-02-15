@@ -1,0 +1,232 @@
+/* General Body Styling */
+.bodyyyy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #76ddeb, #ffffff);
+  margin: 0;
+}
+
+/* Login Form Container */
+.form-container {
+  background: rgba(255, 255, 255, 0.384);
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(151, 149, 149, 0.082);
+  width: 350px;
+  text-align: center;
+}
+
+.form-header {
+  margin-bottom: 20px;
+}
+
+.form-header i {
+  font-size: 50px;
+  color: #4a90e2;
+}
+
+.form-header h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+}
+
+.error-message {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #e63946;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #b3cedd;
+}
+
+.form-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.register {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.register a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+
+ /* Circle Loader Container */
+ .circle-loader {
+  position: relative;
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #4caf50;
+  animation: spin 1.5s linear infinite;
+}
+
+.load-complete .checkmark {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  position: relative;
+  opacity: 0;
+  animation: checkmark 0.5s forwards 1.5s; /* Delay after circle loader */
+}
+
+.checkmark.draw::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  left: 8px;
+  top: 5px;
+}
+
+.success-message {
+  text-align: center;
+  font-size: 18px;
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Keyframe for rotating the circle loader */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keyframe for drawing the checkmark */
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Checkbox and Forgot Password Container */
+.remember-forgot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* Remember Me Checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox-group input {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #007bff; /* Checkbox color */
+}
+
+.checkbox-group label {
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Forgot Password */
+.forgot-password {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.forgot-password:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+/* Google Sign-in Button */
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #db4437; /* Google Red */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.google-button i {
+  font-size: 20px;
+}
+
+.google-button:hover {
+  background-color: #b33625;
+}

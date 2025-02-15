@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  background: #fcfcfc;
+  color: rgb(0, 0, 0);
+  font-family: 'outfit',
+}
+

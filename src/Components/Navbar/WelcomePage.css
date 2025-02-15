@@ -1,0 +1,125 @@
+.bdy {
+    background: linear-gradient(to bottom, #87ceeb, #add8e6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .welcome-container {
+    text-align: center;
+    color: #2e2a2a;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: 100px;
+    animation: slideInUp 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin: 10px 0;
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    font-size: 2.2rem;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .get-started-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1286f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #d27a0c;
+    transform: scale(1.05);
+  }
+  
+  .get-started-btn:active {
+    transform: scale(1);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 1.8rem;
+    }
+    .subtitle {
+      font-size: 1.4rem;
+    }
+    .get-started-btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo img {
+      width: 80px;
+      height: 80px;
+    }
+    .title {
+      font-size: 1.6rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    .get-started-btn {
+      font-size: 0.85rem;
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .welcome-container {
+      padding: 10px;
+    }
+    .title {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .logo img {
+      width: 70px;
+      height: 70px;
+    }
+    .get-started-btn {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+    }
+  }
+  

@@ -1,0 +1,456 @@
+:root {
+  --dark-lemon: #97c5c5;
+  --text-color: #000000;
+  --light-text-color: #000000;
+  --background-color: #f9f9f9;
+  --button-bg: #97c5c5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.wallets-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #97bac5;
+  margin-top: -1.3rem; 
+}
+
+.wallets-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.wallets-info {
+  max-width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left; 
+}
+
+.wallets-info h5 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.wallets-info h4 {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.wallets-info h6 {
+  font-size: 16px;
+  color: #fff;
+  margin: 0 0 20px;
+  text-align: start;
+  text-align: justify;
+}
+
+.regs-input{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  display: grid;
+}
+.regs-input input{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.airtimes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.airtimes-logo img {
+  max-width: 50px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.airtimes-number {
+  font-size: 18px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.images{
+  max-width: 50px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.airtimes-banner {
+  text-align: center;
+  background-color: var(--dark-lemon);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.top-up-section h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.top-ups-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cards {
+  flex: 1 1 calc(33.33% - 15px);
+  background-color: #fff;
+  color: var(--text-color);
+  border-radius: 10%; 
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 1px 10px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 150px; 
+  max-height: 150px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards .cashbacks {
+  color: var(--text-color);
+  font-size: 8px;
+}
+
+.cards h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #463636;
+}
+
+.cards p {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    flex: 1 1 calc(33.33% - 15px); 
+    max-width: 130px; 
+    max-height: 130px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex: 1 1 calc(33.33% - 15px); 
+    max-width: 110px; 
+    max-height: 110px;
+    padding: 6px;
+  }
+
+  .cards h4 {
+    font-size: 14px; 
+  }
+
+  .cards p {
+    font-size: 10px;
+  }
+
+  .top-ups-cards {
+    gap: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    flex: 1 1 calc(33.33% - 8px); 
+    max-width: 90px; 
+    max-height: 90px;
+    padding: 5px;
+  }
+
+  .cards h4 {
+    font-size: 12px;
+  }
+
+  .cards p {
+    font-size: 8px;
+  }
+
+  .top-ups-cards {
+    gap: 13px;
+  }
+}
+
+.customs-amount {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.customs-amount input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.customs-amount button {
+  background-color: var(--button-bg);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.customs-amount button:hover {
+  background-color: #97c5c5;
+}
+
+.airtimes-service h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+.wallets-images {
+  max-width: 50%;
+  text-align: right;
+}
+
+.wallets-images img {
+  max-width: 60%;
+  height: auto;
+}
+
+.wallets-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.wallets-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%; 
+  animation: slide 7s infinite;
+}
+
+.wallets-info h5, .wallet-info h4, .wallet-info h6 {
+  margin: 10px 0;
+}
+
+.wallets-image {
+  max-width: 50%;
+  text-align: center;
+}
+
+.wallets-image img {
+  max-width: 60%;
+  height: auto;
+}
+
+@keyframes slide {
+  0% { transform: translateX(1); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+.slide-in {
+  animation: slide-in-right 1s ease-out;
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive Styles */
+
+@media (min-width: 1024px) {
+  .wallets-info {
+    max-width: 50%;
+  }
+
+  .wallets-image {
+    max-width: 50%;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .wallets-info, .wallets-image {
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .wallets-content {
+    flex-direction: column;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .wallets-info {
+    max-width: 70%;
+    text-align: start;
+  }
+
+  .wallets-image {
+    max-width: 60%;
+    text-align: center;
+  }
+
+  .wallets-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wallets-info h4 {
+    font-size: 18px;
+  }
+
+  .wallets-info h5 {
+    font-size: 14px;
+  }
+
+  .wallets-info h6 {
+    font-size: 10px;
+  }
+
+  .wallets-image img {
+    max-width: 60%; 
+  }
+}
+
+
+.services-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #97c5c5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.services-icon {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--dark-lemon);
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+.services-text h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.services-text p {
+  font-size: 14px;
+  color: var(--light-text-color);
+}
+
+
+.mores-events h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.events-item {
+  background-color: #97c5c2;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  margin-bottom: 10px;
+}
+
+.events-item h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.events-item p {
+  font-size: 14px;
+  color: var(--light-text-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .cards {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .airtimes-logo img {
+    max-width: 40px;
+  }
+
+  .airtimes-number {
+    font-size: 16px;
+  }
+
+  .airtimes-banner {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex: 1 1 100%;
+  }
+
+  .airtimes-logo img {
+    max-width: 30px;
+  }
+
+  .airtimes-number {
+    font-size: 14px;
+  }
+
+  .customs-amount {
+    flex-direction: column;
+  }
+
+  .customs-amount button {
+    width: 100%;
+  }
+}
+
+.users-image-container {
+  position: relative;
+}
+

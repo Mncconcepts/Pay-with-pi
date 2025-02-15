@@ -1,0 +1,602 @@
+:root {
+  --dark-lemon: #97bac5;
+  --text-color: #000000;
+  --light-text-color: #000000;
+  --background-color: #f9f9f9;
+  --button-bg: #97bac5;
+  --shadow-color: rgba(124, 120, 120, 0.1);
+}
+
+.wallet-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #97bac5;
+  margin-top: -1.3rem; 
+}
+
+.wallet-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.wallet-info {
+  max-width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left; 
+}
+
+.wallet-info h5 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.wallet-info h4 {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.wallet-info h6 {
+  font-size: 16px;
+  color: #fff;
+  margin: 0 0 20px;
+  text-align: start;
+  text-align: justify;
+}
+
+.reg-input{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  display: grid;
+}
+.reg-input input{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.airtime-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.airtime-logo img {
+  max-width: 50px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.airtime-number {
+  font-size: 18px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.image{
+  max-width: 50px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.airtime-banner {
+  text-align: center;
+  background-color: var(--dark-lemon);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.top-up-section h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.top-up-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 calc(33.33% - 15px);
+  background-color: #fff;
+  color: var(--text-color);
+  border-radius: 10%; 
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 1px 10px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 150px; 
+  max-height: 150px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .cashback {
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+.card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #463636;
+}
+
+.card p {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.33% - 15px); 
+    max-width: 130px; 
+    max-height: 130px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(33.33% - 15px); 
+    max-width: 110px; 
+    max-height: 110px;
+    padding: 6px;
+  }
+
+  .card h4 {
+    font-size: 14px; 
+  }
+
+  .card p {
+    font-size: 10px;
+  }
+
+  .top-up-card {
+    gap: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(33.33% - 8px); 
+    max-width: 90px; 
+    max-height: 90px;
+    padding: 5px;
+  }
+
+  .card h4 {
+    font-size: 12px;
+  }
+
+  .card p {
+    font-size: 8px;
+  }
+
+  .top-up-card {
+    gap: 13px;
+  }
+}
+
+.custom-amount {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.custom-amount input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.custom-amount button {
+  background-color: var(--button-bg);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-amount button:hover {
+  background-color: #97c5c2;
+}
+
+.airtime-service h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+.wallet-images {
+  max-width: 50%;
+  text-align: right;
+}
+
+.wallet-images img {
+  max-width: 60%;
+  height: auto;
+}
+
+.wallet-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.wallet-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%; 
+  animation: slide 7s infinite;
+}
+
+.wallet-info h5, .wallet-info h4, .wallet-info h6 {
+  margin: 10px 0;
+}
+
+.wallet-image {
+  max-width: 50%;
+  text-align: center;
+}
+
+.wallet-image img {
+  max-width: 60%;
+  height: auto;
+}
+
+@keyframes slide {
+  0% { transform: translateX(1); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+.slide-in {
+  animation: slide-in-right 1s ease-out;
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+
+@media (min-width: 1024px) {
+  .wallet-info {
+    max-width: 50%;
+  }
+
+  .wallet-image {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .wallets-info, .wallets-image {
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .wallet-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .wallet-info {
+    max-width: 70%;
+    text-align: start;
+  }
+
+  .wallet-image {
+    max-width: 60%;
+    text-align: center;
+  }
+
+  .wallet-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wallet-info h4 {
+    font-size: 18px;
+  }
+
+  .wallet-info h5 {
+    font-size: 14px;
+  }
+
+  .wallet-info h6 {
+    font-size: 10px;
+  }
+
+  .wallet-image img {
+    max-width: 60%; 
+  }
+}
+
+.services-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #97bac5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.services-icon {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--dark-lemon);
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+.services-text h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.services-text p {
+  font-size: 14px;
+  color: var(--light-text-color);
+}
+
+.more-events h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.event-item {
+  background-color: #97bac5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  margin-bottom: 10px;
+}
+
+.events-item h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.events-item p {
+  font-size: 14px;
+  color: var(--light-text-color);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .airtime-logo img {
+    max-width: 40px;
+  }
+
+  .airtime-number {
+    font-size: 16px;
+  }
+
+  .airtime-banner {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex: 1 1 100%;
+  }
+
+  .airtime-logo img {
+    max-width: 30px;
+  }
+
+  .airtime-number {
+    font-size: 14px;
+  }
+
+  .custom-amount {
+    flex-direction: column;
+  }
+
+  .customs-amount button {
+    width: 100%;
+  }
+}
+
+.user-image-container {
+  position: relative;
+}
+
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Background blur effect */
+.popup-card {
+  background: rgb(245, 247, 245);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Pop-up card styling */
+.popup-content {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+  height: auto;
+  max-width: 95%;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Title styling */
+.popup-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Payment details */
+.popup-content p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #444;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Network logo styling */
+.network-logo {
+  width: 40px;
+  height: auto;
+}
+
+/* Button styling */
+.popup-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.popup-content .btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.popup-content .btn-primary:hover {
+  background: #0056b3;
+}
+
+.popup-content .btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.popup-content .btn-secondary:hover {
+  background: #545b62;
+}
+
+/* Loading Animation Container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Three Dots Loading Effect */
+.loading-text {
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.dots::after {
+  content: ".";
+  animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+  0% { content: "."; }
+  33% { content: ".."; }
+  66% { content: "..."; }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,117 @@
+.footer {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    width: 100%; 
+    background-color: #000; 
+    padding: 8px 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.footer-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff; 
+    text-decoration: none;
+    font-size: 14px;
+    flex: 1;
+    padding: 5px;
+    max-width: 80px;
+    transition: color 0.3s ease, transform 0.3s ease; 
+    position: relative; 
+}
+
+.footer-button i {
+    font-size: 22px; 
+    margin-bottom: 5px;
+}
+
+.footer-button span {
+    font-size: 12px; 
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.footer-button:hover {
+    color: #97c5c2; 
+    transform: scale(1.1);
+}
+
+.footer-button.selected::after {
+    content: ''; 
+    position: absolute;
+    bottom: -2px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%; 
+    height: 2px; 
+    background-color: #97c5c2; 
+    border-radius: 2px; 
+}
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 10px 8px;
+    }
+
+    .footer-button {
+        max-width: 70px; 
+    }
+
+    .footer-button i {
+        font-size: 20px; 
+    }
+
+    .footer-button span {
+        font-size: 11px; 
+    }
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .footer {
+        justify-content: space-evenly; 
+        padding: 8px;
+    }
+
+    .footer-button {
+        max-width: 75px; 
+    }
+
+    .footer-button i {
+        font-size: 18px; 
+    }
+
+    .footer-button span {
+        font-size: 10px; 
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .footer {
+        flex-wrap: wrap; 
+        padding: 5px;
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    .footer-button {
+        max-width: 100px; 
+    }
+
+    .footer-button i {
+        font-size: 16px; 
+    }
+
+    .footer-button span {
+        font-size: 9px; 
+    }
+}
