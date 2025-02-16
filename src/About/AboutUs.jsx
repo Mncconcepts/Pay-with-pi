@@ -19,7 +19,7 @@ const AboutUs = () => {
                 </div>
                 <div className="hero-image">
                     <img
-                        src="src/assets/pi03.png"
+                        src="/assets/pi03.png"
                         alt="Hero"
                     />
                 </div>
@@ -74,7 +74,7 @@ const AboutUs = () => {
                 </div>
                 <div data-aos="fade-left" className="bg-light features-image mb-5">
                     <img
-                        src="src/assets/display1.png"
+                        src="/assets/display1.png"
                         alt="Feature"
                     />
                     <div className="overlay-box">
@@ -90,7 +90,7 @@ const AboutUs = () => {
             <div className="additional-features">
                 <div data-aos="fade-right" className="bg-light features-image">
                     <img
-                        src="src/assets/display2.png"
+                        src="/assets/display2.png"
                         alt="Business"
                     />
                     <div className="overlay-box pt-10">
