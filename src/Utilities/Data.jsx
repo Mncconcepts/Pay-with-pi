@@ -64,17 +64,17 @@ const Data = () => {
             {showDropdown && (
               <div className="dropdowns-menu">
                 <img
-                  src="src/assets/airtelogo2.png"
+                  src="/assets/airtelogo2.png"
                   alt="net 1"
                   onClick={() => handleImageSelect('/assets/airtelogo2.png')}
                 />
                 <img
-                  src="src/assets/glologo.png"
+                  src="/assets/glologo.png"
                   alt="net 2"
                   onClick={() => handleImageSelect('/assets/glologo.png')}
                 />
                 <img
-                  src="src/assets/mtnlogo2.png"
+                  src="/assets/mtnlogo2.png"
                   alt="net 3"
                   onClick={() => handleImageSelect('/assets/mtnlogo2.png')}
                 />
