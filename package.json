@@ -1,6 +1,6 @@
 {
   "name": "pay-with-pi",
-  "homepage" :"https://github.com/Mncconcepts/Pay-with-pi.git",
+  "homepage" :".",
   "private": true,
   "version": "0.0.0",
   "type": "module",
