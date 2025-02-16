@@ -57,7 +57,7 @@ const ForgotPassword = () => {
                 ) : (
                     <div className="formm-content">
                         <h1>Forgot Password?</h1>
-                        <p>No worries, enter your email and we'll send reset instructions.</p>
+                        <p>No need to worry, enter your email and we'll send reset instructions.</p>
 
                         <form onSubmit={handleSubmit}>
                             <div className="formm-group">
