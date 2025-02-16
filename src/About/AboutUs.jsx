@@ -19,7 +19,7 @@ const AboutUs = () => {
                 </div>
                 <div className="hero-image">
                     <img
-                        src="src/assets/pi03.png"
+                        src="/assets/pi03.png"
                         alt="Hero"
                     />
                 </div>
