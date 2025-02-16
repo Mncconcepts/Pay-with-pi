@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../Components/Navbar/Footer';
 
 const Airtime = () => {
-  const [selectedImage, setSelectedImage] = useState('/src/assets/airtelogo2.png');
+  const [selectedImage, setSelectedImage] = useState('/assets/airtelogo2.png');
   const [showDropdown, setShowDropdown] = useState(false);
   const [amount, setAmount] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -47,7 +47,7 @@ const Airtime = () => {
               <button className="btn btn-success" type="submit">See Offer</button>
             </div>
             <div className="wallet-images slide-in">
-              <img src="/src/assets/slider2.png" alt="Promotional" />
+              <img src="/assets/slider2.png" alt="Promotional" />
             </div>
           </div>
           <div className="wallet-slide">
@@ -57,7 +57,7 @@ const Airtime = () => {
               <button className="btn btn-success" type="submit">See Offer</button>
             </div>
             <div className="wallet-image slide-in">
-              <img src="/src/assets/slider2.png" alt="Promotional Offer" />
+              <img src="/assets/slider2.png" alt="Promotional Offer" />
             </div>
           </div>
         </div>
@@ -74,19 +74,19 @@ const Airtime = () => {
             {showDropdown && (
               <div className="dropdowns-menu">
                 <img
-                  src="/src/assets/airtelogo2.png"
+                  src="/assets/airtelogo2.png"
                   alt="Network 1"
-                  onClick={() => handleImageSelect('/src/assets/airtelogo2.png')}
+                  onClick={() => handleImageSelect('/assets/airtelogo2.png')}
                 />
                 <img
                   src="/src/assets/glologo.png"
                   alt="Network 2"
-                  onClick={() => handleImageSelect('/src/assets/glologo.png')}
+                  onClick={() => handleImageSelect('/assets/glologo.png')}
                 />
                 <img
                   src="/src/assets/mtnlogo2.png"
                   alt="Network 3"
-                  onClick={() => handleImageSelect('/src/assets/mtnlogo2.png')}
+                  onClick={() => handleImageSelect('/assets/mtnlogo2.png')}
                 />
               </div>
             )}

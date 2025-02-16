@@ -44,7 +44,7 @@ const Help = () => {
       <div className="helps-cards">
         <div data-aos="fade-up" className="helps-card">
           <div className="helps-image">
-            <img src="src/assets/help1.jpg" alt="Customer Support" />
+            <img src="/assets/help1.jpg" alt="Customer Support" />
           </div>
           <div className="helps-content">
             <h4>Customer Support</h4>
@@ -69,14 +69,14 @@ const Help = () => {
             <button onClick={() => setShowTicketForm(true)}>Submit a Ticket</button>
           </div>
           <div className="helps-image">
-            <img src="src/assets/help2.jpg" alt="Ticket Support" />
+            <img src="/assets/help2.jpg" alt="Ticket Support" />
           </div>
         </div>
 
         {/* FAQ */}
         <div data-aos="fade-up" className="helps-card">
           <div className="helps-image">
-            <img src="src/assets/help3.jpg" alt="FAQ" />
+            <img src="/assets/help3.jpg" alt="FAQ" />
           </div>
           <div className="helps-content">
             <h4>FAQ</h4>

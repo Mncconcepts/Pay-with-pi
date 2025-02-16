@@ -6,7 +6,7 @@
 }
 
 .heroo-section {
-    background: url('src/assets/pi01.png') no-repeat center center/cover;
+    background: url('/assets/pi01.png') no-repeat center center/cover;
     height: 85vh;
     position: relative;
     display: flex;
@@ -142,7 +142,7 @@
 .consult-services {
     padding: 50px 20px;
     text-align: center;
-    background-image: url(../assets/cover2.jpg);
+    background-image: url(/assets/cover2.jpg);
     color: #fff;
 }
 

@@ -106,7 +106,7 @@ const Profile = () => {
           <div className="content-wrapper">
             {/* Profile Cover */}
             <div className="profile-cover">
-              <img src="src/assets/cover1.jpg" alt="Banner" className="banner-img" />
+              <img src="/assets/cover1.jpg" alt="Banner" className="banner-img" />
             </div>
             <div className="profile-header">
               <input
@@ -118,7 +118,7 @@ const Profile = () => {
               />
               <label htmlFor="profileImageInput">
                 <img
-                  src={formData.profileImage || 'src/assets/user1.png'}
+                  src={formData.profileImage || '/assets/user1.png'}
                   alt="Profile"
                   className="profile-img-large"
                   style={{ cursor: 'pointer' }}
