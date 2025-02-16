@@ -79,12 +79,12 @@ const Airtime = () => {
                   onClick={() => handleImageSelect('/assets/airtelogo2.png')}
                 />
                 <img
-                  src="/src/assets/glologo.png"
+                  src="/assets/glologo.png"
                   alt="Network 2"
                   onClick={() => handleImageSelect('/assets/glologo.png')}
                 />
                 <img
-                  src="/src/assets/mtnlogo2.png"
+                  src="/assets/mtnlogo2.png"
                   alt="Network 3"
                   onClick={() => handleImageSelect('/assets/mtnlogo2.png')}
                 />
