@@ -106,20 +106,22 @@
       padding: 10px;
     }
     .title {
-      font-size: 1.4rem;
+      font-size: 2rem;
       text-align: center;
     }
     .subtitle {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       text-align: center;
+      font-weight: bold;
     }
     .logo img {
       width: 70px;
       height: 70px;
     }
     .get-started-btn {
-      font-size: 0.8rem;
-      padding: 6px 10px;
+      font-size: 1rem;
+      padding: 8px 12px;
+      font-weight: bold;
     }
   }
   

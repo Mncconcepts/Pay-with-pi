@@ -20,7 +20,7 @@ const SubMenu = () => {
                         </div>
                         <div className="modal-item">
                             <i className="fas fa-coins"></i>
-                            <span>Earn</span>
+                            <span>Withdraw</span>
                         </div>
                     </div>
                 </div>
