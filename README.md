@@ -1,5 +1,10 @@
-Paywith-pi is a revolutionary online platform and mobile app that enables users to pay for various utility blls and subscription using pi currency.
+Paywith-pi is a revolutionary online platform and mobile app that enables users to pay for various utility bills and subscription using pi currency.
 Our mission is to bridge the gap between crypto currency holders and everyday expenses, providing a seamless and secured payment experience.
+
+A secured payment web application, vast pages website with multi dynamic routing.
+responsive functional and interactive server.
+
+KEY FEATURES COMING SOON.
                     
 # React + Vite
 
