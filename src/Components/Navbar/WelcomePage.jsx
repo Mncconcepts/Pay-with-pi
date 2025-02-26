@@ -38,7 +38,8 @@ const WelcomePage = () => {
     <div className="bdy">
       <div className="welcome-container">
         <div className="logo logo-animate">
-          <img src="" alt="Logo" />
+          {/* <img src="" alt="Logo" /> */}
+          <h4><strong>PAYWITHPI.</strong></h4>
         </div>
         <h1 className="title">
           {titleText.slice(0, textIndex)}

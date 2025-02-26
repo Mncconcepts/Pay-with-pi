@@ -42,7 +42,7 @@ const Airtime = () => {
         <div className="wallet-slider">
           <div className="wallet-slide">
             <div className="wallet-info slide-in">
-              <h1>Top Airtime Bundles Just For You</h1>
+              <h2>Top Airtime Bundles Just For You</h2>
               <h6>Save More with Every Purchase</h6>
               <button className="btn btn-success" type="submit">See Offer</button>
             </div>
@@ -52,7 +52,7 @@ const Airtime = () => {
           </div>
           <div className="wallet-slide">
             <div className="wallet-info slide-in">
-              <h1>Recharge Airtime For Tomorrow.</h1>
+              <h2>Recharge Airtime For Tomorrow.</h2>
               <h6>Save More With Our Sure Plan</h6>
               <button className="btn btn-success" type="submit">See Offer</button>
             </div>
@@ -111,9 +111,8 @@ const Airtime = () => {
         <section>
           <h3 className="mt-3 mb-3">Exclusive Airtime Bundles</h3>
           <div className="top-up-card">
-            {[{ amount: 50, cashback: 1, airtime: '₦50' }, { amount: 100, cashback: 3, airtime: '₦100' }, { amount: 200, cashback: 5, airtime: '₦200' }, { amount: 500, cashback: 10, airtime: '₦500' }, { amount: 1000, cashback: 20, airtime: '₦1000' }, { amount: 2000, cashback: 40, airtime: '₦2000' }].map((bundle, index) => (
+            {[{ amount: 50, airtime: '₦50' }, { amount: 100, airtime: '₦100' }, { amount: 200, airtime: '₦200' }, { amount: 500, airtime: '₦500' }, { amount: 1000, airtime: '₦1000' }, { amount: 2000, airtime: '₦2000' }].map((bundle, index) => (
               <div className="cards" key={index} onClick={() => setAmount(bundle.amount)}>
-                <p className="cashback">₦{bundle.cashback} Cashback</p>
                 <h4>{bundle.airtime}</h4>
                 <p>Pay ₦{bundle.amount}</p>
               </div>
@@ -127,7 +126,7 @@ const Airtime = () => {
         </section>
 
         <section className="airtimes-service">
-          <h2 className="mt-3 mb-1">Data Service</h2>
+          <h2 className="mt-3 mb-1">Airtime Service</h2>
           <div className="services-item mt-3">
             <div className="services-icon">USSD</div>
             <div className="services-text">
@@ -137,17 +136,6 @@ const Airtime = () => {
           </div>
         </section>
 
-        <section className="mores-events">
-          <h3 className="mt-2">More Events</h3>
-          <div className="event-item mt-2 mb-3">
-            <h4>Win up to 100M bonus!</h4>
-            <p>Get exciting cash prizes this Christmas!</p>
-          </div>
-          <div className="event-item">
-            <h4>Register and Win Now!</h4>
-            <p>Don't miss out on amazing offers!</p>
-          </div>
-        </section>
 
         {/* Main Payment Details Popup */}
         {showPopup && !isProcessing && (

@@ -18,11 +18,11 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 
 const Dashboard = () => {
   const [activityData, setActivityData] = useState({
-    labels: [], // Timestamps for activities
+    labels: [],
     datasets: [
       {
         label: "Activity",
-        data: [], // Number of activities
+        data: [],
         borderColor: "#76ddeb",
         backgroundColor: "rgba(118, 221, 235, 0.2)",
         fill: true,
@@ -30,7 +30,7 @@ const Dashboard = () => {
       },
       {
         label: "Transactions",
-        data: [], // Number of transactions
+        data: [],
         borderColor: "#ffa726",
         backgroundColor: "rgba(255, 167, 38, 0.2)",
         fill: true,
@@ -50,35 +50,59 @@ const Dashboard = () => {
     ticket: 0,
   });
 
-  // Simulate dynamic data for activity and cards
+  // Fetch transaction data in real time
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().toLocaleTimeString();
-      setActivityData((prevData) => ({
-        labels: [...prevData.labels.slice(-9), now], // Keep the last 10 timestamps
-        datasets: [
-          {
-            ...prevData.datasets[0],
-            data: [...prevData.datasets[0].data.slice(-9), Math.floor(Math.random() * 10)],
-          },
-          {
-            ...prevData.datasets[1],
-            data: [...prevData.datasets[1].data.slice(-9), Math.floor(Math.random() * 20)],
-          },
-        ],
-      }));
+    const fetchTransactions = () => {
+      // Simulating API call (Replace this with actual API call)
+      const transactionHistory = JSON.parse(localStorage.getItem("transactions")) || [];
 
-      setCardData({
-        balance: Math.floor(Math.random() * 100000),
-        orders: Math.floor(Math.random() * 1000),
-        transactions: Math.floor(Math.random() * 5000),
-        deposit: Math.floor(Math.random() * 20000),
-        revenue: Math.floor(Math.random() * 100000),
-        users: Math.floor(Math.random() * 10000),
-        withdraw: Math.floor(Math.random() * 15000),
-        ticket: Math.floor(Math.random() * 500),
-      });
-    }, 2000); // Update every 2 seconds
+      if (transactionHistory.length === 0) {
+        // If no transactions exist, reset to zero
+        setCardData({
+          balance: 0,
+          orders: 0,
+          transactions: 0,
+          deposit: 0,
+          revenue: 0,
+          users: 0,
+          withdraw: 0,
+          ticket: 0,
+        });
+      } else {
+        // Calculate real-time data
+        const totalBalance = transactionHistory.reduce((acc, t) => acc + t.amount, 0);
+        const totalTransactions = transactionHistory.length;
+        const totalDeposit = transactionHistory.filter(t => t.type === "Deposit").reduce((acc, t) => acc + t.amount, 0);
+        const totalWithdraw = transactionHistory.filter(t => t.type === "Withdraw").reduce((acc, t) => acc + t.amount, 0);
+        const totalRevenue = totalBalance - totalWithdraw; // Example revenue calculation
+
+        setCardData({
+          balance: totalBalance.toFixed(2),
+          orders: totalTransactions,
+          transactions: totalTransactions,
+          deposit: totalDeposit.toFixed(2),
+          revenue: totalRevenue.toFixed(2),
+          users: 1000, // Placeholder (fetch actual user count if needed)
+          withdraw: totalWithdraw.toFixed(2),
+          ticket: 50, // Placeholder (fetch actual ticket count if needed)
+        });
+
+        // Update chart data
+        const now = new Date().toLocaleTimeString();
+        setActivityData(prevData => ({
+          labels: [...prevData.labels.slice(-9), now],
+          datasets: [
+            { ...prevData.datasets[0], data: [...prevData.datasets[0].data.slice(-9), totalTransactions] },
+            { ...prevData.datasets[1], data: [...prevData.datasets[1].data.slice(-9), totalDeposit] },
+          ],
+        }));
+      }
+    };
+
+    fetchTransactions();
+
+    // Fetch transactions every 10 seconds
+    const interval = setInterval(fetchTransactions, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -93,27 +117,12 @@ const Dashboard = () => {
           options={{
             responsive: true,
             plugins: {
-              legend: {
-                position: "top",
-              },
-              title: {
-                display: true,
-                text: "Activity and Transaction Tracking",
-              },
+              legend: { position: "top" },
+              title: { display: true, text: "Activity and Transaction Tracking" },
             },
             scales: {
-              x: {
-                title: {
-                  display: true,
-                  text: "Time",
-                },
-              },
-              y: {
-                title: {
-                  display: true,
-                  text: "Count",
-                },
-              },
+              x: { title: { display: true, text: "Time" } },
+              y: { title: { display: true, text: "Count" } },
             },
           }}
         />

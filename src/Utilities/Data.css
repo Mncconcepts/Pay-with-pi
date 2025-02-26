@@ -13,7 +13,7 @@
   align-items: center;
   padding: 20px;
   background-color: #97bac5;
-  margin-top: -1.3rem; 
+  margin-top: -1.3rem;
 }
 
 .wallets-content {
@@ -21,14 +21,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .wallets-info {
   max-width: 50%;
   padding: 20px;
   box-sizing: border-box;
-  text-align: left; 
+  text-align: left;
 }
 
 .wallets-info h5 {
@@ -53,13 +53,14 @@
   text-align: justify;
 }
 
-.regs-input{
+.regs-input {
   display: flex;
   gap: 10px;
   margin-top: 20px;
   display: grid;
 }
-.regs-input input{
+
+.regs-input input {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
@@ -86,7 +87,7 @@
   font-weight: bold;
 }
 
-.images{
+.images {
   max-width: 50px;
   height: auto;
   margin-top: 1rem;
@@ -120,13 +121,13 @@
   flex: 1 1 calc(33.33% - 15px);
   background-color: #fff;
   color: var(--text-color);
-  border-radius: 10%; 
+  border-radius: 10%;
   padding: 10px;
   text-align: center;
   box-shadow: 0 1px 10px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 150px; 
-  max-height: 150px; 
+  max-width: 150px;
+  max-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,8 +153,8 @@
 
 @media (max-width: 1024px) {
   .cards {
-    flex: 1 1 calc(33.33% - 15px); 
-    max-width: 130px; 
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: 130px;
     max-height: 130px;
     padding: 8px;
   }
@@ -161,14 +162,14 @@
 
 @media (max-width: 768px) {
   .cards {
-    flex: 1 1 calc(33.33% - 15px); 
-    max-width: 110px; 
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: 110px;
     max-height: 110px;
     padding: 6px;
   }
 
   .cards h4 {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .cards p {
@@ -176,14 +177,14 @@
   }
 
   .top-ups-cards {
-    gap: 10px; 
+    gap: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .cards {
-    flex: 1 1 calc(33.33% - 8px); 
-    max-width: 90px; 
+    flex: 1 1 calc(33.33% - 8px);
+    max-width: 90px;
     max-height: 90px;
     padding: 5px;
   }
@@ -235,6 +236,7 @@
   color: var(--text-color);
   margin-bottom: 10px;
 }
+
 .wallets-images {
   max-width: 50%;
   text-align: right;
@@ -257,11 +259,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 100%; 
+  min-width: 100%;
   animation: slide 7s infinite;
 }
 
-.wallets-info h5, .wallet-info h4, .wallet-info h6 {
+.wallets-info h5,
+.wallet-info h4,
+.wallet-info h6 {
   margin: 10px 0;
 }
 
@@ -276,10 +280,21 @@
 }
 
 @keyframes slide {
-  0% { transform: translateX(1); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(1);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  66% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .slide-in {
@@ -287,8 +302,15 @@
 }
 
 @keyframes slide-in-right {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Responsive Styles */
@@ -305,7 +327,9 @@
 
 /* Medium screens */
 @media (max-width: 1024px) and (min-width: 768px) {
-  .wallets-info, .wallets-image {
+
+  .wallets-info,
+  .wallets-image {
     max-width: 50%;
     text-align: center;
   }
@@ -345,7 +369,7 @@
   }
 
   .wallets-image img {
-    max-width: 60%; 
+    max-width: 60%;
   }
 }
 
@@ -453,4 +477,3 @@
 .users-image-container {
   position: relative;
 }
-

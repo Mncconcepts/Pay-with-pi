@@ -44,6 +44,11 @@
   margin: 0 0 10px;
   font-weight: bold;
 }
+.wallet-info h2{
+  font-size: 3rem;
+  color: #000000;
+  margin: 0 0 10px;
+}
 
 .wallet-info h6 {
   font-size: 16px;
@@ -298,8 +303,9 @@
   }
 
   .wallet-image {
-    max-width: 50%;
+    max-width: 30%;
   }
+  
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -343,6 +349,13 @@
 
   .wallet-image img {
     max-width: 60%; 
+  }
+  .wallet-info h2{
+    font-size: 20px;
+    color: #000000;
+    margin: 0 0 10px;
+    text-align: start;
+    
   }
 }
 

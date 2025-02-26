@@ -16,25 +16,65 @@ const Hero = () => {
     profileImage: '',
   });
 
+  const [showSendPopup, setShowSendPopup] = useState(false);
+  const [showReceivePopup, setShowReceivePopup] = useState(false);
+  const [copySuccess, setCopySuccess] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [transactionSuccess, setTransactionSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    address: '',
+    network: '',
+    amount: '',
+  });
+
   const navigate = useNavigate();
 
-  // Calculate total balance
   useEffect(() => {
     const balance = transactions.reduce((acc, transaction) => acc + transaction.amount, 0);
     setTotalBalance(balance);
   }, [transactions]);
 
-  // Load user data from localStorage
   useEffect(() => {
     const name = localStorage.getItem('username') || 'Guest';
     const email = localStorage.getItem('email') || 'guest@example.com';
     const profileImage = localStorage.getItem('profileImage') || '/src/assets/default-profile.png';
 
-    setUserData({ name, profileImage });
+    setUserData({ name, email, profileImage });
   }, []);
 
   const handleNavigation = (path) => {
     navigate(path);
+  };
+
+  const handleSend = () => {
+    setShowSendPopup(true);
+  };
+
+  const handleReceive = () => {
+    setShowReceivePopup(true);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleTransaction = () => {
+    setIsProcessing(true);
+    setTimeout(() => {
+      setIsProcessing(false);
+      setTransactionSuccess(true);
+      setTimeout(() => {
+        setTransactionSuccess(false);
+        setShowSendPopup(false);
+      }, 2000);
+    }, 60000);
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText('user-wallet-address');
+    setCopySuccess(true);
+    setTimeout(() => setCopySuccess(false), 2000);
   };
 
   return (
@@ -45,7 +85,7 @@ const Hero = () => {
             src={userData.profileImage}
             alt="User Avatar"
             className="avatar"
-            onClick={() => handleNavigation('/profile')} 
+            onClick={() => handleNavigation('/profile')}
             style={{ cursor: 'pointer' }}
           />
           <div className="user-name">
@@ -65,10 +105,10 @@ const Hero = () => {
           <h1>${totalBalance.toFixed(2)}</h1>
         </div>
         <div className="walletactions">
-          <button>
+          <button onClick={handleSend}>
             <i className="fas fa-paper-plane"></i> Send
           </button>
-          <button>
+          <button onClick={handleReceive}>
             <i className="fas fa-exchange-alt"></i> Receive
           </button>
         </div>
@@ -115,12 +155,76 @@ const Hero = () => {
               <p>{userData.name}</p>
               <small>{transaction.type}</small>
             </div>
-            <p className={`amount ${transaction.amount < 0 ? 'negative' : 'positive'}`}>
+            <p className={`amount ${transaction.amount < 0 ? 'negative' : 'positive'}`}> 
               {transaction.amount < 0 ? '-' : '+'} ${Math.abs(transaction.amount).toFixed(2)}
             </p>
           </div>
         ))}
       </section>
+
+      {showSendPopup && (
+        <div className="popup-overlay">
+          <div className="popup-card">
+            {isProcessing ? (
+              <div className="processing">
+                <div className="spinner"></div>
+                <p>Processing Transaction...</p>
+              </div>
+            ) : transactionSuccess ? (
+              <div className="success-message">
+                <p>Transaction Sent Successfully!</p>
+              </div>
+            ) : (
+              <>
+                <h3>Send Money</h3>
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Recipient Address"
+                  value={formData.address}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="text"
+                  name="network"
+                  placeholder="Network"
+                  value={formData.network}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="number"
+                  name="amount"
+                  placeholder="Amount"
+                  value={formData.amount}
+                  onChange={handleInputChange}
+                />
+                <p>Transaction Fee: 1.00pi</p>
+                <button onClick={handleTransaction}>Send</button>
+                <button onClick={() => setShowSendPopup(false)}>Cancel</button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {showReceivePopup && (
+        <div className="popup-overlay">
+          <div className="popup-card">
+            <h3>Receive Money</h3>
+            <input type="text" readOnly value="user-wallet-address" />
+            <button onClick={handleCopy}>Copy</button>
+            <button onClick={() => setShowReceivePopup(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+
+      {copySuccess && (
+        <div className="popup-overlay">
+          <div className="popup-card">
+            <p>Copied Successfully!</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

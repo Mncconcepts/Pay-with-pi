@@ -37,7 +37,7 @@ const Data = () => {
         <div className="wallets-slider">
           <div className="wallets-slide">
             <div className="wallets-info slide-in">
-              <h1>Exclusive & Top Data Bundles</h1>
+              <h2>Exclusive & Top Data Bundles</h2>
               <h6>Save More with Every Purchase</h6>
               <button className='btn btn-success' type='submit'>See Offer</button>
             </div>
@@ -101,9 +101,8 @@ const Data = () => {
         <section>
           <h3 className="mt-3 mb-3">Exclusive Airtime Bundles</h3>
           <div className="top-up-card">
-            {[{ amount: 50, cashback: 1, airtime: '₦50' }, { amount: 100, cashback: 3, airtime: '₦100' }, { amount: 200, cashback: 5, airtime: '₦200' }, { amount: 500, cashback: 10, airtime: '₦500' }, { amount: 1000, cashback: 20, airtime: '₦1000' }, { amount: 2000, cashback: 40, airtime: '₦2000' }].map((bundle, index) => (
+            {[{ amount: 50, airtime: '₦50' }, { amount: 100, airtime: '₦100' }, { amount: 200, airtime: '₦200' }, { amount: 500, airtime: '₦500' }, { amount: 1000, airtime: '₦1000' }, { amount: 2000, airtime: '₦2000' }].map((bundle, index) => (
               <div className="cards" key={index} onClick={() => setAmount(bundle.amount)}>
-                <p className="cashback">₦{bundle.cashback} Cashback</p>
                 <h4>{bundle.airtime}</h4>
                 <p>Pay ₦{bundle.amount}</p>
               </div>
@@ -125,18 +124,8 @@ const Data = () => {
             </div>
           </div>
         </section>
+        
 
-        <section className="mores-events">
-          <h3 className="mt-2">More Events</h3>
-          <div className="event-item mt-2 mb-3">
-            <h4>Win up to 100M bonus!</h4>
-            <p>Get exciting cash prizes this Christmas!</p>
-          </div>
-          <div className="event-item">
-            <h4>Register and Win Now!</h4>
-            <p>Don't miss out on amazing offers!</p>
-          </div>
-        </section>
         {/* Main Payment Details Popup */}
         {showPopup && !isProcessing && (
           <div className="popup">

@@ -35,6 +35,10 @@
   display: flex;
   flex-direction: column;
 }
+.user-name small{
+  margin-top: -1rem;
+  margin-bottom: 22px;
+}
 
 .user-name h2 {
   font-size: 1.5rem;
@@ -246,4 +250,114 @@
 
 .amount.positive {
   color: green;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup Card */
+.popup-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Input Fields */
+.popup-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.popup-card button {
+  width: 45%;
+  padding: 10px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-card button:first-of-type {
+  background-color: #4c98af;
+  color: white;
+}
+
+.popup-card button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+.popup-card button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.popup-card button:last-of-type:hover {
+  background-color: #e53935;
+}
+
+/* Spinner */
+.processing .spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #58a1c4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+/* Processing Text */
+.processing p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Success Message */
+.success-message p {
+  font-size: 20px;
+  color: #4caf50;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
