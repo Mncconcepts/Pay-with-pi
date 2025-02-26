@@ -99,39 +99,45 @@ const ContactUs = () => {
 
             {/* help section */}
             <section>
-                <div className="help-section">
-                    <div data-aos="fade-left" className=''>
-                        <h3>Need help?</h3>
-                        <p>
-                            We Are Always Available, Reach Us Out
-                        </p>
-                    </div>
-                    <div className="help-cards">
-                        <div data-aos="zoom-in" className="help-card">
-                            <i className="fas fa-headset"></i>
-                            <h4>Customer support</h4>
-                            <p>Pellentesque faucibus leo bibendum sapien ullamcorperdian congue.</p>
-                            <button>Learn more</button>
-                        </div>
-                        <div data-aos="zoom-in" className="help-card">
-                            <i className="fas fa-ticket-alt"></i>
-                            <h4>Ticket support</h4>
-                            <p>Pellentesque faucibus leo bibendum sapien ullamcorperdian congue.</p>
-                            <Link to="/help">
-                            <button>Learn more</button>
-                            </Link>
-                        </div>
-                        <div data-aos="zoom-in" className="help-card">
-                            <i className="fas fa-question-circle"></i>
-                            <h4>FAQ</h4>
-                            <p>Pellentesque faucibus leo bibendum sapien ullamcorperdian congue.</p>
-                            <Link to="/faq">
-                                <button>Learn more</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <div className="help-section">
+        <div data-aos="fade-left" className=''>
+            <h3>Need help?</h3>
+            <p>
+                We accept Pi as payment! Our team is always available, reach out to us anytime.
+            </p>
+        </div>
+        <div className="help-cards">
+            <div data-aos="zoom-in" className="help-card">
+                <i className="fas fa-headset"></i>
+                <h4>Customer support</h4>
+                <p>
+                    Need assistance? We accept Pi as payment and are here to help you with any inquiries.
+                </p>
+                <button>Learn more</button>
+            </div>
+            <div data-aos="zoom-in" className="help-card">
+                <i className="fas fa-ticket-alt"></i>
+                <h4>Ticket support</h4>
+                <p>
+                    Have a ticket issue? We accept Pi as payment and are ready to assist with any support.
+                </p>
+                <Link to="/help">
+                <button>Learn more</button>
+                </Link>
+            </div>
+            <div data-aos="zoom-in" className="help-card">
+                <i className="fas fa-question-circle"></i>
+                <h4>FAQ</h4>
+                <p>
+                    Got questions? Check our FAQ for more details about our services and Pi payment options.
+                </p>
+                <Link to="/faq">
+                    <button>Learn more</button>
+                </Link>
+            </div>
+        </div>
+    </div>
+</section>
             {/* Footer Section */}
             <footer className="footerr-section">
                 <div className="footerr-content">
