@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { FaMoon, FaSun } from 'react-icons/fa'; // Import icons from react-icons
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,6 @@ const Navbar = () => {
     });
   };
 
-  // Apply dark mode class to the body element
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
@@ -25,7 +24,6 @@ const Navbar = () => {
     }
   }, [isDarkMode]);
 
-  // Toggle menu visibility
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
   const handleMenuClose = () => setMenuOpen(false);
 
