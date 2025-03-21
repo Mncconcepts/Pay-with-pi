@@ -130,7 +130,6 @@ const ContactUs = () => {
 
             {/* help section */}
             <section>
-<<<<<<< HEAD
     <div className="help-section">
         <div data-aos="fade-left" className=''>
             <h3>Need help?</h3>
@@ -170,41 +169,6 @@ const ContactUs = () => {
         </div>
     </div>
 </section>
-=======
-                <div className="help-section">
-                    <div data-aos="fade-left" className=''>
-                        <h3>Need help?</h3>
-                        <p>
-                            We Are Always Available, Reach Us Out
-                        </p>
-                    </div>
-                    <div className="help-cards">
-                        <div data-aos="zoom-in" className="help-card">
-                            <i className="fas fa-headset"></i>
-                            <h4>Customer support</h4>
-                            <p>Get quick assistance from our support team anytime you need help.</p>
-                            <button>Learn more</button>
-                        </div>
-                        <div data-aos="zoom-in" className="help-card">
-                            <i className="fas fa-ticket-alt"></i>
-                            <h4>Ticket support</h4>
-                            <p>Submit a support ticket and we will resolve your issue promptly.</p>
-                            <Link to="/help">
-                                <button>Learn more</button>
-                            </Link>
-                        </div>
-                        <div data-aos="zoom-in" className="help-card">
-                            <i className="fas fa-question-circle"></i>
-                            <h4>FAQ</h4>
-                            <p>Find answers to common questions about our services.</p>
-                            <Link to="/faq">
-                                <button>Learn more</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
->>>>>>> cb660a2 (remake)
             {/* Footer Section */}
             <footer className="footerr-section">
                 <div className="footerr-content">
