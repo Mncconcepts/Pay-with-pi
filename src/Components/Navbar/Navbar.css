@@ -19,11 +19,8 @@
   font-weight: bold;
   font-size: large;
 }
-
-.text-white h4 link {
+.no-underline-link {
   text-decoration: none;
-  color: inherit;
-  display: inline-block;
 }
 
 .text-white {
@@ -32,7 +29,6 @@
   font-weight: 400;
 }
 
-/* Hamburger icon styles */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -132,5 +128,19 @@
 
   .nav-menu li i {
     display: inline;
+  }
+}
+@media (max-width: 480px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu li i {
+    display: inline;
+  }
+  .no-underline-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
   }
 }

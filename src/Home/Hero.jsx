@@ -20,6 +20,9 @@ const Hero = () => {
   const [showReceivePopup, setShowReceivePopup] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [recipient, setRecipient] = useState('');
+  const [network, setNetwork] = useState('');
+  const [amount, setAmount] = useState('');
   const [transactionSuccess, setTransactionSuccess] = useState(false);
   const [formData, setFormData] = useState({
     address: '',
@@ -155,7 +158,7 @@ const Hero = () => {
               <p>{userData.name}</p>
               <small>{transaction.type}</small>
             </div>
-            <p className={`amount ${transaction.amount < 0 ? 'negative' : 'positive'}`}> 
+            <p className={`amount ${transaction.amount < 0 ? 'negative' : 'positive'}`}>
               {transaction.amount < 0 ? '-' : '+'} ${Math.abs(transaction.amount).toFixed(2)}
             </p>
           </div>
@@ -179,27 +182,27 @@ const Hero = () => {
                 <h3>Send Money</h3>
                 <input
                   type="text"
-                  name="address"
                   placeholder="Recipient Address"
-                  value={formData.address}
-                  onChange={handleInputChange}
+                  value={recipient}
+                  onChange={(e) => setRecipient(e.target.value)}
+                  required
                 />
                 <input
                   type="text"
-                  name="network"
                   placeholder="Network"
-                  value={formData.network}
-                  onChange={handleInputChange}
+                  value={network}
+                  onChange={(e) => setNetwork(e.target.value)}
+                  required
                 />
                 <input
                   type="number"
-                  name="amount"
                   placeholder="Amount"
-                  value={formData.amount}
-                  onChange={handleInputChange}
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  required
                 />
                 <p>Transaction Fee: 1.00pi</p>
-                <button onClick={handleTransaction}>Send</button>
+                <button onClick={handleTransaction} disabled={!recipient || !network || !amount}>Send</button>
                 <button onClick={() => setShowSendPopup(false)}>Cancel</button>
               </>
             )}

@@ -4,7 +4,7 @@
   padding: 30px 10px;
   margin-top: -2.5rem;
   overflow-x: hidden;
-  width: calc(100% - 2px); 
+  width: calc(100% - 2px);
 }
 
 .hero-section {
@@ -16,7 +16,7 @@
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  margin-top: -1rem;
+  margin-top: -1.6rem;
 }
 
 .hero-image img {
@@ -149,11 +149,12 @@
 }
 
 @media (max-width: 1024px) {
+
   .about-section,
   .hero-section,
   .features-section,
   .additional-features {
-    width: 100%; 
+    width: 100%;
     margin-left: 0;
   }
 
@@ -261,18 +262,20 @@
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(-100%);
   }
 }
-/* Footer Section */
+
 .footerrr-section {
   background: #1b1b1b;
   color: #fff;
   padding: 30px 15px;
   margin-bottom: 0.2rem;
 }
-.footerrr-section p{
+
+.footerrr-section p {
   text-align: center;
   margin-bottom: 2rem;
 }

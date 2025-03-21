@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState } from "react";
 import './ContactUs.css';
 import { Link } from 'react-router';
 import Footer from '../Components/Navbar/Footer';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        setTimeout(() => {
+            setIsSubmitting(false);
+            setIsSubmitted(true);
+            setTimeout(() => {
+                setIsSubmitted(false);
+            }, 4000);
+        }, 3000);
+    };
     const contactInfo = [
         {
             title: 'Phone Number',
@@ -71,14 +88,28 @@ const ContactUs = () => {
                         </div>
                     ))}
                 </div>
-                <form data-aos="fade-up" className="contactt-form">
-                    <h4 className='mb-4'>Send Us Messages</h4>
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
-                    <input type="text" placeholder="Your Subject" required />
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
+                <div data-aos="zoom-in" className="contactt-form">
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" placeholder="Full Name" required />
+                        <input type="email" placeholder="Your Email" required />
+                        <input type="text" placeholder="Subject" required />
+                        <textarea placeholder="Write Your Message" required></textarea>
+
+                        <button className="send-message" type="submit" disabled={isSubmitting}>
+                            {isSubmitting ? (
+                                <>
+                                    <FontAwesomeIcon icon={faSpinner} spin /> Submitting...
+                                </>
+                            ) : isSubmitted ? (
+                                <>
+                                    <FontAwesomeIcon icon={faCheck} /> Message Sent Successfully
+                                </>
+                            ) : (
+                                "Send Message"
+                            )}
+                        </button>
+                    </form>
+                </div>
             </section>
 
             {/* Consult Services Section */}
@@ -86,7 +117,7 @@ const ContactUs = () => {
                 <div data-aos="fade-right" className='consult'>
                     <h2>Consult the services you need now!</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat ipsum dolor.</p>
+                <p>Reach out to us, consult any service you might need from us</p>
                 <div data-aos="fade-up" className="features">
                     {features.map((feature, index) => (
                         <div key={index}>{feature}</div>
@@ -99,6 +130,7 @@ const ContactUs = () => {
 
             {/* help section */}
             <section>
+<<<<<<< HEAD
     <div className="help-section">
         <div data-aos="fade-left" className=''>
             <h3>Need help?</h3>
@@ -138,6 +170,41 @@ const ContactUs = () => {
         </div>
     </div>
 </section>
+=======
+                <div className="help-section">
+                    <div data-aos="fade-left" className=''>
+                        <h3>Need help?</h3>
+                        <p>
+                            We Are Always Available, Reach Us Out
+                        </p>
+                    </div>
+                    <div className="help-cards">
+                        <div data-aos="zoom-in" className="help-card">
+                            <i className="fas fa-headset"></i>
+                            <h4>Customer support</h4>
+                            <p>Get quick assistance from our support team anytime you need help.</p>
+                            <button>Learn more</button>
+                        </div>
+                        <div data-aos="zoom-in" className="help-card">
+                            <i className="fas fa-ticket-alt"></i>
+                            <h4>Ticket support</h4>
+                            <p>Submit a support ticket and we will resolve your issue promptly.</p>
+                            <Link to="/help">
+                                <button>Learn more</button>
+                            </Link>
+                        </div>
+                        <div data-aos="zoom-in" className="help-card">
+                            <i className="fas fa-question-circle"></i>
+                            <h4>FAQ</h4>
+                            <p>Find answers to common questions about our services.</p>
+                            <Link to="/faq">
+                                <button>Learn more</button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+>>>>>>> cb660a2 (remake)
             {/* Footer Section */}
             <footer className="footerr-section">
                 <div className="footerr-content">

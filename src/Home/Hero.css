@@ -29,6 +29,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .user-name {
@@ -252,7 +253,6 @@
   color: green;
 }
 
-/* Popup Overlay */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -266,7 +266,6 @@
   z-index: 999;
 }
 
-/* Popup Card */
 .popup-card {
   background: #fff;
   padding: 20px;
@@ -278,7 +277,6 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Input Fields */
 .popup-card input {
   width: 100%;
   padding: 10px;
@@ -288,7 +286,6 @@
   font-size: 16px;
 }
 
-/* Buttons */
 .popup-card button {
   width: 45%;
   padding: 10px;
@@ -318,7 +315,6 @@
   background-color: #e53935;
 }
 
-/* Spinner */
 .processing .spinner {
   width: 60px;
   height: 60px;
@@ -329,14 +325,12 @@
   margin: 20px auto;
 }
 
-/* Processing Text */
 .processing p {
   font-size: 18px;
   margin-top: 10px;
   color: #555;
 }
 
-/* Success Message */
 .success-message p {
   font-size: 20px;
   color: #4caf50;
@@ -344,7 +338,6 @@
   margin: 20px 0;
 }
 
-/* Animations */
 @keyframes spin {
   to {
     transform: rotate(360deg);

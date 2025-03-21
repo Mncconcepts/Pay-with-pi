@@ -13,7 +13,7 @@
   align-items: center;
   padding: 20px;
   background-color: #97bac5;
-  margin-top: -1.3rem;
+  margin-top: -1.9rem;
 }
 
 .wallets-content {
@@ -339,7 +339,6 @@
   }
 }
 
-/* Small screens */
 @media (max-width: 768px) {
   .wallets-info {
     max-width: 70%;

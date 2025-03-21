@@ -34,9 +34,10 @@ const Navbar = () => {
   return (
     <div className={`navbar ${isDarkMode ? 'dark' : ''}`}>
       {/* <img src="" alt="Logo" className="logo" /> */}
-      <Link to="/home">
-      <h4 className='text-white'> <strong>Paywithpi.</strong></h4>
+      <Link to="/home" className="no-underline-link">
+        <h4 className='text-white'> <strong>Paywithpi.</strong></h4>
       </Link>
+
 
       {/* Hamburger icon for small screens */}
       <div className="hamburger" onClick={toggleMenu}>

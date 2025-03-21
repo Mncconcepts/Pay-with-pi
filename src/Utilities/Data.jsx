@@ -99,7 +99,7 @@ const Data = () => {
         </div>
 
         <section>
-          <h3 className="mt-3 mb-3">Exclusive Airtime Bundles</h3>
+          <h3 className="mt-3 mb-3">Exclusive Data Deals</h3>
           <div className="top-up-card">
             {[{ amount: 50, airtime: '₦50' }, { amount: 100, airtime: '₦100' }, { amount: 200, airtime: '₦200' }, { amount: 500, airtime: '₦500' }, { amount: 1000, airtime: '₦1000' }, { amount: 2000, airtime: '₦2000' }].map((bundle, index) => (
               <div className="cards" key={index} onClick={() => setAmount(bundle.amount)}>

@@ -151,7 +151,7 @@ const Airtime = () => {
                 <button className="btn btn-primary" onClick={() => setIsProcessing(true)}>
                   Pay Now
                 </button>
-                <button className="btn btn-secondary" onClick={() => setShowPopup(false)}>
+                <button className="btn btn-cancel" onClick={() => setShowPopup(false)}>
                   Cancel
                 </button>
               </div>
