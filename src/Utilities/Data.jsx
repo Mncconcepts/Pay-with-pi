@@ -19,17 +19,21 @@ const Data = () => {
   const handleAmountChange = (event) => {
     setAmount(event.target.value);
   };
+
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
+  };
+
   useEffect(() => {
-      if (isProcessing) {
-        setProcessingComplete(false);
-        const timer = setTimeout(() => {
-          setProcessingComplete(true);
-        }, 60000); // 60 seconds
-  
-        return () => clearTimeout(timer);
-      }
-    }, [isProcessing]);
-  
+    if (isProcessing) {
+      setProcessingComplete(false);
+      const timer = setTimeout(() => {
+        setProcessingComplete(true);
+      }, 60000); // 60 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [isProcessing]);
 
   return (
     <div>
@@ -82,7 +86,7 @@ const Data = () => {
             )}
           </div>
           <div className="regs-input d-block">
-            <input type="number" name="number" placeholder="phone" />
+            <input type="number" name="number" placeholder="phone" value={phoneNumber} onChange={handlePhoneNumberChange} />
           </div>
           <div className="users-image-container">
             <img
@@ -124,13 +128,13 @@ const Data = () => {
             </div>
           </div>
         </section>
-        
+
 
         {/* Main Payment Details Popup */}
         {showPopup && !isProcessing && (
-          <div className="popup">
-            <div className="popup-card">
-              <div className="popup-content">
+          <div className="poopup">
+            <div className="poopup-card">
+              <div className="poopup-content">
                 <h3>Payment Details</h3>
                 <p>Phone Number: {phoneNumber}</p>
                 <p>
@@ -140,7 +144,7 @@ const Data = () => {
                 <button className="btn btn-primary" onClick={() => setIsProcessing(true)}>
                   Pay Now
                 </button>
-                <button className="btn btn-secondary" onClick={() => setShowPopup(false)}>
+                <button className="btn btn-cancel" onClick={() => setShowPopup(false)}>
                   Cancel
                 </button>
               </div>
@@ -150,9 +154,9 @@ const Data = () => {
 
         {/* Payment Processing Popup */}
         {isProcessing && (
-          <div className="popup">
-            <div className="popup-card">
-              <div className="popup-content">
+          <div className="poopup">
+            <div className="poopup-card">
+              <div className="poopup-content">
                 <h3>{processingComplete ? "Payment Complete!" : "Processing Payment"}</h3>
 
                 {processingComplete ? (

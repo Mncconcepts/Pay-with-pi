@@ -465,20 +465,7 @@
   position: relative;
 }
 
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.popup-card {
+.poopup-card {
   background: rgb(245, 247, 245);
   border-radius: 10px;
   padding: 2rem;
@@ -489,7 +476,7 @@
   max-width: 400px;
 }
 
-.popup-content {
+.poopup-content {
   background: white;
   padding: 1.8rem;
   border-radius: 12px;
@@ -500,14 +487,14 @@
   animation: slideIn 0.3s ease-in-out;
 }
 
-.popup-content h3 {
+.poopup-content h3 {
   margin-bottom: 1rem;
   font-size: 1.4rem;
   font-weight: bold;
   color: #333;
 }
 
-.popup-content p {
+.poopup-content p {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -522,7 +509,7 @@
   height: auto;
 }
 
-.popup-content button {
+.poopup-content button {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -533,22 +520,24 @@
   transition: 0.3s;
 }
 
-.popup-content .btn-primary {
+.poopup-content .btn-primary {
   background: #007bff;
   color: white;
 }
 
-.popup-content .btn-primary:hover {
+.poopup-content .btn-primary:hover {
   background: #0056b3;
+  color: #ffffff;
 }
 
-.popup-content .btn-secondary {
+.poopup-content .btn-secondary {
   background: #6c757d;
   color: white;
 }
 
-.popup-content .btn-secondary:hover {
+.poopup-content .btn-secondary:hover {
   background: #545b62;
+  color: #fff;
 }
 
 .btn-cancel{

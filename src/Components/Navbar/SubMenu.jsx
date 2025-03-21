@@ -125,7 +125,7 @@ const SubMenu = () => {
                                     >
                                         Send
                                     </button>
-                                    <button type='button' onClick={() => setShowTransfer(false)}>Cancel</button>
+                                    <button className='pop-ups' type='button' onClick={() => setShowTransfer(false)}>Cancel</button>
                                 </div>
                             </>
                         )}

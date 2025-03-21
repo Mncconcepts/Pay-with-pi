@@ -139,9 +139,9 @@ const Airtime = () => {
 
         {/* Main Payment Details Popup */}
         {showPopup && !isProcessing && (
-          <div className="popup">
-            <div className="popup-card">
-              <div className="popup-content">
+          <div className="poopup">
+            <div className="poopup-card">
+              <div className="poopup-content">
                 <h3>Payment Details</h3>
                 <p>Phone Number: {phoneNumber}</p>
                 <p>
@@ -161,9 +161,9 @@ const Airtime = () => {
 
         {/* Payment Processing Popup */}
         {isProcessing && (
-          <div className="popup">
-            <div className="popup-card">
-              <div className="popup-content">
+          <div className="poopup">
+            <div className="poopup-card">
+              <div className="poopup-content">
                 <h3>{processingComplete ? "Payment Complete!" : "Processing Payment"}</h3>
 
                 {processingComplete ? (
