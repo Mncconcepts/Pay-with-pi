@@ -179,7 +179,7 @@ const Hero = () => {
               </div>
             ) : (
               <>
-                <h3>Send Money</h3>
+                <h3>Send</h3>
                 <input
                   type="text"
                   placeholder="Recipient Address"
@@ -213,7 +213,7 @@ const Hero = () => {
       {showReceivePopup && (
         <div className="popup-overlay">
           <div className="popup-card">
-            <h3>Receive Money</h3>
+            <h3>Receive</h3>
             <input type="text" readOnly value="user-wallet-address" />
             <button onClick={handleCopy}>Copy</button>
             <button onClick={() => setShowReceivePopup(false)}>Cancel</button>
