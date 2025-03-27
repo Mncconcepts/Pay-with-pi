@@ -13,6 +13,11 @@ import "aos/dist/aos.css";
 const PageLoader = ({ children, setLoading }) => {
   const location = useLocation();
   const [showContent, setShowContent] = useState(false);
+  const [refresh, setRefresh] = useState(0);
+
+  useEffect(() => {
+    setRefresh((prev) => prev + 1);
+  }, [location]);
 
   useEffect(() => {
     setLoading(true);

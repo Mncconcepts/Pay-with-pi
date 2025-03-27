@@ -120,7 +120,7 @@ const SignUp = () => {
             <i className="fas fa-user-plus"></i>
             <h2 className="sub-head">Create Your Account</h2>
           </div>
-          <form onSubmit={handleSubmit}>
+          <form  action="action.php" onSubmit={handleSubmit}>
             <div className="forms-group">
               <input
                 type="text"
