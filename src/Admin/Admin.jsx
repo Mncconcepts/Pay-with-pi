@@ -51,7 +51,7 @@ const Admin = () => {
             {/* Main Content */}
             <div className="dashboard-content">
                 <div className="dashboard-chart">
-                    <h2>Sales Overview</h2>
+                    <h2 className="mt-2">Sales Overview</h2>
                     <ResponsiveContainer width="100%" height={250}>
                         <LineChart data={data}>
                             <CartesianGrid strokeDasharray="3 3" />
@@ -64,7 +64,7 @@ const Admin = () => {
                     </ResponsiveContainer>
                 </div>
                 <div className="dashboard-analytics">
-                    <h2>Sales Distribution</h2>
+                    <h2 className="mt-2">Sales Distribution</h2>
                     <ResponsiveContainer width="100%" height={250}>
                         <PieChart>
                             <Tooltip />
@@ -82,7 +82,7 @@ const Admin = () => {
             {/* Additional Charts */}
             <div className="dashboard-extra-charts">
                 <div className="dashboard-bar-chart">
-                    <h2>Order Statistics</h2>
+                    <h2 className="mt-2">Order Statistics</h2>
                     <ResponsiveContainer width="100%" height={250}>
                         <BarChart data={data}>
                             <CartesianGrid strokeDasharray="3 3" />
@@ -99,7 +99,7 @@ const Admin = () => {
             {/* Additional Cards */}
             <div className="dashboard-cards">
                 <div className="dashboard-recent-activities">
-                    <h2>Recent Activities</h2>
+                    <h2 className="mt-2">Recent Activities</h2>
                     <ul>
                         <li>New order placed by John Doe</li>
                         <li>Product XYZ shipped</li>
@@ -108,7 +108,7 @@ const Admin = () => {
                     </ul>
                 </div>
                 <div className="dashboard-order-status">
-                    <h2>Order Status</h2>
+                    <h2 className="mt-2">Order Status</h2>
 
                     <div className="status-row">
                         <p>Pending: 0</p>
