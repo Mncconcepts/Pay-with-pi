@@ -30,6 +30,7 @@ import Help from './Components/Navbar/Help.jsx';
 import TermsConditions from './Components/Navbar/TermsConditions.jsx';
 import Spinner from './Components/Navbar/Spinner.jsx';
 import ForgotPassword from './Components/Navbar/ForgotPassword.jsx';
+import Admin from './Admin/Admin.jsx';
 
 
 
@@ -89,6 +90,10 @@ const router = createHashRouter([
       {
         path: "/notification",
         element: <Notification/>
+      },
+      {
+        path: "/admin",
+        element: <Admin/>
       }
 
     ],

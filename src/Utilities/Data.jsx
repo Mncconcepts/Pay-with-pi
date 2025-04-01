@@ -41,7 +41,7 @@ const Data = () => {
         <div className="wallets-slider">
           <div className="wallets-slide">
             <div className="wallets-info slide-in">
-              <h2>Exclusive & Top Data Bundles</h2>
+              <h2>Exclusive Data Bundles</h2>
               <h6>Save More with Every Purchase</h6>
               <button className='btn btn-success' type='submit'>See Offer</button>
             </div>
@@ -141,6 +141,7 @@ const Data = () => {
                   Network: <img src={selectedImage} alt="Selected Network" className="network-logo" />
                 </p>
                 <p>Amount: ₦{amount}</p>
+                <p>Transaction fee: 0.2 Pi</p>
                 <button className="btn btn-primary" onClick={() => setIsProcessing(true)}>
                   Pay Now
                 </button>

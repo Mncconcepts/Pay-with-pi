@@ -13,8 +13,8 @@
 .content {
   flex: 1;
   padding: 20px;
-  width: calc(100% - 250px); /* Adjust for sidebar space */
-  margin-left: 250px; /* Sidebar space */
+  width: calc(100% - 250px);
+  margin-left: 250px;
 }
 
 .dashboard .grid {
@@ -73,21 +73,16 @@ input:checked + .slider::before {
   transform: translateX(25px);
 }
 
-
-.home {
-  text-align: center;
-  padding: 50px;
-}
-
 h2 {
   text-align: start;
   margin-bottom: 20px;
+  margin-top: -1.1rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 15px;
 }
 
 .dashboard-card {
@@ -112,7 +107,6 @@ h2 {
   font-weight: bold;
 }
 
-/* Sidebar-specific adjustments */
 @media (min-width: 1024px) {
   .content {
     margin-left: 250px; 
@@ -125,7 +119,6 @@ h2 {
   }
 }
 
-/* Medium screens */
 @media (max-width: 768px) {
   .content {
     margin-left: 0; 
@@ -134,7 +127,7 @@ h2 {
   }
 
   .dashboard .grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
 
@@ -152,7 +145,6 @@ h2 {
   }
 }
 
-/* Small screens */
 @media (max-width: 576px) {
   .dashboard .grid {
     grid-template-columns: repeat(1, 4fr); 

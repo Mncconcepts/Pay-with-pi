@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; 
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -13,10 +13,10 @@ import {
 import "./Dashboard.css";
 import Footer from "./Footer";
 
-// Register the required Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const Dashboard = () => {
+  const [hoverData, setHoverData] = useState(null);
   const [activityData, setActivityData] = useState({
     labels: [],
     datasets: [
@@ -42,52 +42,29 @@ const Dashboard = () => {
   const [cardData, setCardData] = useState({
     balance: 0,
     orders: 0,
-    transactions: 0,
     deposit: 0,
-    revenue: 0,
-    users: 0,
     withdraw: 0,
-    ticket: 0,
   });
 
-  // Fetch transaction data in real time
   useEffect(() => {
     const fetchTransactions = () => {
-      // Simulating API call (Replace this with actual API call)
       const transactionHistory = JSON.parse(localStorage.getItem("transactions")) || [];
-
       if (transactionHistory.length === 0) {
-        // If no transactions exist, reset to zero
-        setCardData({
-          balance: 0,
-          orders: 0,
-          transactions: 0,
-          deposit: 0,
-          revenue: 0,
-          users: 0,
-          withdraw: 0,
-          ticket: 0,
-        });
+        setCardData({ balance: 0, orders: 0, deposit: 0, withdraw: 0, ticket: 0 });
       } else {
-        // Calculate real-time data
         const totalBalance = transactionHistory.reduce((acc, t) => acc + t.amount, 0);
         const totalTransactions = transactionHistory.length;
         const totalDeposit = transactionHistory.filter(t => t.type === "Deposit").reduce((acc, t) => acc + t.amount, 0);
         const totalWithdraw = transactionHistory.filter(t => t.type === "Withdraw").reduce((acc, t) => acc + t.amount, 0);
-        const totalRevenue = totalBalance - totalWithdraw; // Example revenue calculation
-
+        
         setCardData({
           balance: totalBalance.toFixed(2),
           orders: totalTransactions,
-          transactions: totalTransactions,
           deposit: totalDeposit.toFixed(2),
-          revenue: totalRevenue.toFixed(2),
-          users: 1000, // Placeholder (fetch actual user count if needed)
           withdraw: totalWithdraw.toFixed(2),
-          ticket: 50, // Placeholder (fetch actual ticket count if needed)
+          ticket: 50,
         });
 
-        // Update chart data
         const now = new Date().toLocaleTimeString();
         setActivityData(prevData => ({
           labels: [...prevData.labels.slice(-9), now],
@@ -98,18 +75,14 @@ const Dashboard = () => {
         }));
       }
     };
-
     fetchTransactions();
-
-    // Fetch transactions every 10 seconds
     const interval = setInterval(fetchTransactions, 10000);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="dashboards">
-      <h2>Analytics</h2>
+      <h2>Analytics For User Transaction</h2>
       <hr className="mb-4" />
       <div className="chart-container">
         <Line
@@ -128,46 +101,30 @@ const Dashboard = () => {
         />
       </div>
       <div className="grid mb-5">
-        <div className="cardss">
-          <i className="fas fa-wallet"></i>
-          <span>Balance</span>
-          <h3>${cardData.balance}</h3>
-        </div>
-        <div className="cardss">
-          <i className="fas fa-box"></i>
-          <span>Orders</span>
-          <h3>{cardData.orders}</h3>
-        </div>
-        <div className="cardss">
-          <i className="fas fa-exchange-alt"></i>
-          <span>Transactions</span>
-          <h3>{cardData.transactions}</h3>
-        </div>
-        <div className="cardss">
-          <i className="fas fa-dollar-sign"></i>
-          <span>Deposit</span>
-          <h3>${cardData.deposit}</h3>
-        </div>
-        <div className="cardss">
-          <i className="fas fa-chart-line"></i>
-          <span>Revenue</span>
-          <h3>${cardData.revenue}</h3>
-        </div>
-        <div className="cardss">
-          <i className="fas fa-users"></i>
-          <span>Users</span>
-          <h3>{cardData.users}</h3>
-        </div>
-        <div className="cardss">
-          <i className="fas fa-exchange-alt"></i>
-          <span>Withdraw</span>
-          <h3>${cardData.withdraw}</h3>
-        </div>
-        <div className="cardss">
-          <i className="fas fa-ticket-alt"></i>
-          <span>Ticket</span>
-          <h3>{cardData.ticket}</h3>
-        </div>
+        {[
+          { icon: "fa-wallet", label: "Balance", value: `$${cardData.balance}` },
+          { icon: "fa-box", label: "Your Orders", value: cardData.orders },
+          { icon: "fa-dollar-sign", label: "Deposit", value: `$${cardData.deposit}` },
+          { icon: "fa-exchange-alt", label: "Withdraw", value: `$${cardData.withdraw}` },
+          { icon: "fa-ticket-alt", label: "Your Ticket", value: cardData.ticket },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="cardss"
+            onMouseEnter={() => setHoverData({ label: item.label, value: item.value, date: new Date().toLocaleDateString() })}
+            onMouseLeave={() => setHoverData(null)}
+          >
+            <i className={`fas ${item.icon}`}></i>
+            <span>{item.label}</span>
+            <h3>{item.value}</h3>
+            {hoverData && hoverData.label === item.label && (
+              <div className="hover-info">
+                <p>Date: {hoverData.date}</p>
+                <p>Sales: {hoverData.value}</p>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
       <Footer />
     </div>

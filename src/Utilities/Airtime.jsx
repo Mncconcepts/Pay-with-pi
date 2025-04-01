@@ -148,6 +148,7 @@ const Airtime = () => {
                   Network: <img src={selectedImage} alt="Selected Network" className="network-logo" />
                 </p>
                 <p>Amount: ₦{amount}</p>
+                <p>Transaction fee: 0.2 Pi</p>
                 <button className="btn btn-primary" onClick={() => setIsProcessing(true)}>
                   Pay Now
                 </button>

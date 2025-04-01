@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { FaMoon, FaSun } from 'react-icons/fa';
+// import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isDarkMode, setDarkMode] = useState(false);
 
-  // Toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => {
       const newMode = !prevMode;
@@ -33,7 +32,7 @@ const Navbar = () => {
     <div className={`navbar ${isDarkMode ? 'dark' : ''}`}>
       {/* <img src="" alt="Logo" className="logo" /> */}
       <Link to="/home" className="no-underline-link">
-        <h4 className='text-white'> <strong>Paywithpi.</strong></h4>
+        <h4 className='text-white font-extrabold'> <strong>Paywithpi.</strong></h4>
       </Link>
 
 

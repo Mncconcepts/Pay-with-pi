@@ -12,7 +12,7 @@
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 400px;
+    max-width: 300px;
     width: 100%;
   }
   
@@ -40,8 +40,6 @@
   .logout-yes {
     background-color: #ff6347;
     color: white;
-    box-shadow: 0 0 10px #ff6347;
-    animation: glow 1.5s infinite ease-in-out;
   }
   
   .logout-no {
@@ -49,20 +47,6 @@
     color: white;
   }
   
-  /* Glowing Animation */
-  /* @keyframes glow {
-    0% {
-      box-shadow: 0 0 5px #6da3cf70;
-    }
-    50% {
-      box-shadow: 0 0 20px #4c82afc7, 0 0 30px #4c82afaf;
-    }
-    100% {
-      box-shadow: 0 0 5px #649ac7af;
-    }
-  } */
-  
-  /* Hover Effects */
   .logout-yes:hover {
     background-color: #4c82af;
     transform: scale(1.05);
@@ -83,7 +67,6 @@
     transition: all 0.3s ease;
   }
   
-  /* Hover Effect for Generic Button */
   .logout-button:hover {
     background-color: #4c82af;
     transform: scale(1.05);

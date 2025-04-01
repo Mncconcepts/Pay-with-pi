@@ -1,0 +1,278 @@
+.dashboards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin-top: -2.5rem;
+}
+
+.dashboard-header-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(95, 94, 94, 0.1);
+    width: 100%;
+    margin-top: -1rem;
+}
+
+.dashboard-header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.kard {
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.kard-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kard-icon {
+    font-size: 24px;
+}
+
+.icon-style {
+    font-size: 24px;
+}
+
+.purple {
+    background: linear-gradient(135deg, #6b46c1, #9b59b6);
+}
+
+.blue {
+    background: linear-gradient(135deg, #3182ce, #4a90e2);
+}
+
+.red {
+    background: linear-gradient(135deg, #e53e3e, #ff6b6b);
+}
+
+.orange {
+    background: linear-gradient(135deg, #dd6b20, #ff9f43);
+}
+
+.green {
+    background: linear-gradient(135deg, #38a169, #56c596);
+}
+
+.teal {
+    background: linear-gradient(135deg, #319795, #48c9b0);
+}
+
+.kard:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.dashboard-chart,
+.dashboard-analytics,
+.dashboard-bar-chart {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(66, 66, 66, 0.1);
+    width: 100%;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.dashboard-recent-activities,
+.dashboard-order-status {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.dashboard-recent-activities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard-recent-activities li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    .dashboard-header,
+    .dashboard-content,
+    .dashboard-cards {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+
+    .dashboard-header,
+    .dashboard-content,
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    .dashboard-header-card,
+    .dashboard-chart,
+    .dashboard-analytics,
+    .dashboard-bar-chart,
+    .dashboard-recent-activities,
+    .dashboard-order-status {
+        padding: 5px;
+    }
+
+    .kard {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .dashboard-header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.open-btn {
+    padding: 8px 12px;
+    color: rgb(34, 100, 145);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+ .status-row p{
+    text-align: center;
+ }
+.open-btn.pending {
+    background: #ffcc00;
+}
+
+.open-btn.pending:hover::after {
+    content: "View pending orders";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.open-btn.completed {
+    background: #38a169;
+}
+
+.open-btn.completed:hover::after {
+    content: "View completed orders";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.open-btn.cancelled {
+    background: #e53e3e;
+}
+
+.open-btn.cancelled:hover::after {
+    content: "View cancelled orders";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.poopup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.poopup-card {
+    background: white;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #c53030;
+}
+
+@media (max-width: 768px) {
+    .poopup-card {
+        width: 80%;
+    }
+}
