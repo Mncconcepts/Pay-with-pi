@@ -10,6 +10,34 @@ import Spinner from "./Components/Navbar/Spinner";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+const ScrollRestoration = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const navType = performance.getEntriesByType("navigation")[0]?.type;
+
+    if (navType === "back_forward") {
+      const savedPosition = sessionStorage.getItem(`scroll-${location.key}`);
+      if (savedPosition) {
+        window.scrollTo(0, parseInt(savedPosition, 10));
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+
+    const handleScroll = () => {
+      sessionStorage.setItem(`scroll-${location.key}`, window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location]);
+
+  return null;
+};
+
 const PageLoader = ({ children, setLoading }) => {
   const location = useLocation();
   const [showContent, setShowContent] = useState(false);
@@ -22,16 +50,16 @@ const PageLoader = ({ children, setLoading }) => {
   useEffect(() => {
     setLoading(true);
     setShowContent(false);
-    
+
     const timer = setTimeout(() => {
       setLoading(false);
       setShowContent(true);
-    }, 1000); // Adjust time as needed
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [location, setLoading]);
 
-  return showContent ? children : null; // Only render children when loading is complete
+  return showContent ? children : null;
 };
 
 const App = () => {
@@ -57,7 +85,9 @@ const App = () => {
 
   return (
     <div className={`app ${darkMode ? "dark-mode" : "light-mode"} ${loading ? "loading" : ""}`}>
-      {loading && <Spinner />} {/* Show Spinner when loading */}
+      <ScrollRestoration />
+      {loading && <Spinner />}
+
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/signup" element={<SignUp />} />

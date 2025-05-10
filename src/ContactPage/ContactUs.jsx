@@ -124,7 +124,9 @@ const ContactUs = () => {
                     ))}
                 </div>
                 <div data-aos="fade-right" className=''>
-                    <button>Contact Us</button>
+                    <Link to="/about">
+                    <button><strong>See Our Services</strong></button>
+                    </Link>
                 </div>
             </section>
 
@@ -144,7 +146,9 @@ const ContactUs = () => {
                 <p>
                     Need assistance? We accept Pi as payment and are here to help you with any inquiries.
                 </p>
+                <Link to="/help">
                 <button>Learn more</button>
+                </Link>
             </div>
             <div data-aos="zoom-in" className="help-card">
                 <i className="fas fa-ticket-alt"></i>

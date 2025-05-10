@@ -1,9 +1,9 @@
 :root {
-  --dark-lemon: #97c5c5;
+  --dark-lemon: #789fac;
   --text-color: #000000;
   --light-text-color: #000000;
   --background-color: #f9f9f9;
-  --button-bg: #97c5c5;
+  --button-bg: #789fac;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #97bac5;
+  background-color: #789fac;
   margin-top: -1.9rem;
 }
 
@@ -377,7 +377,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  background-color: #97c5c5;
+  background-color: #789fac;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 10px var(--shadow-color);
@@ -398,12 +398,12 @@
 .services-text h4 {
   font-size: 16px;
   font-weight: bold;
-  color: var(--text-color);
+  color: #fff;
 }
 
 .services-text p {
   font-size: 14px;
-  color: var(--light-text-color);
+  color: #fff;
 }
 
 
@@ -414,7 +414,7 @@
 }
 
 .events-item {
-  background-color: #97c5c2;
+  background-color: #789fac;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 10px var(--shadow-color);

@@ -167,15 +167,15 @@ const AboutUs = () => {
                 </ul>
             </div>
              {/* Footer Section */}
-             <footer className="footerrr-section">
-                <div className="footerrr-content">
+             <footer className="footerr-section">
+                <div className="footerr-content">
                     <div className="logo">PAYWITH-PI</div>
                     <p>revolutionary online platform and mobile
                         app that enables users to pay for various utility blls and subscription using pi currency,
                         Our mission is to bridge the gap between crypto currency holders and everyday expenses,
                         providing a seamless and secured payment experience</p>
                 </div>
-                <div className="footerrr-links">
+                <div className="footerr-links">
                     <div>
                         <h4>Our Services</h4>
                         <ul>

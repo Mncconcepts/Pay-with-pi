@@ -129,7 +129,7 @@ const Profile = () => {
             <p className="user-bio">{formData.bio || 'Add a short bio about yourself.'}</p>
             <h2 className="main-title">Settings</h2>
 
-            {/* Navigation Tabs */}
+           {/* Navigation Tabs */}
             <nav className="tabs">
               {['My details', 'Profile', 'Password'].map((tab) => (
                 <button

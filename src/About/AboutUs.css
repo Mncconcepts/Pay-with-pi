@@ -268,44 +268,40 @@
   }
 }
 
-.footerrr-section {
+.footerr-section {
   background: #1b1b1b;
   color: #fff;
   padding: 30px 15px;
-  margin-bottom: 0.2rem;
 }
 
-.footerrr-section p {
+.footerr-section p {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.footerrr-content {
+.footerr-content {
   text-align: center;
   margin-bottom: 20px;
 }
-
-.footerrr-links {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.footerr-content .logo{
+  font-weight: bold;
 }
 
-.footerrr-links div {
+.footerr-links div {
   flex: 1;
   max-width: 300px;
 }
 
-.footerrr-links h4 {
+.footerr-links h4 {
   margin-bottom: 10px;
 }
 
-.footerrr-links ul {
+.footerr-links ul {
   list-style: none;
   padding: 0;
   cursor: pointer;
 }
 
-.footerrr-links li {
+.footerr-links li {
   margin-bottom: 8px;
 }
