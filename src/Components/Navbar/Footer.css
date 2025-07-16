@@ -6,9 +6,9 @@
     bottom: 0;
     left: 0; 
     width: 100%; 
-    background-color: #000; 
+    background: #ffffff;
     padding: 8px 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -30,6 +30,8 @@
 .footer-button i {
     font-size: 22px; 
     margin-bottom: 5px;
+    color: #0f3844;
+    transition: color 0.3s ease;
 }
 
 .footer-button span {
@@ -39,7 +41,7 @@
 }
 
 .footer-button:hover {
-    color: #97c5c2; 
+    color: #0f3844; 
     transform: scale(1.1);
 }
 

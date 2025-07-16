@@ -14,7 +14,7 @@ const Sidebar = () => {
       <aside className="sidebar">
         <ul>
           <li onClick={() => handleNavigation("/home")} className="clickable">Home</li>
-          <li onClick={() => handleNavigation("/dashboard")} className="clickable">Dashboard</li>
+          <li onClick={() => handleNavigation("/passkey")} className="clickable">Dashboard</li>
           <li onClick={() => handleNavigation("/CardsAccount")} className="clickable">Cards & Account</li>
           <li onClick={() => handleNavigation("/submenu")} className="clickable">Add Funds</li>
           <li onClick={() => handleNavigation("/submenu")} className="clickable">Withdraw Funds</li>

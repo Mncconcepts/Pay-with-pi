@@ -102,10 +102,10 @@ const Dashboard = () => {
       </div>
       <div className="grid mb-5">
         {[
-          { icon: "fa-wallet", label: "Balance", value: `$${cardData.balance}` },
+          { icon: "fa-wallet", label: "Balance", value: `π ${cardData.balance}` },
           { icon: "fa-box", label: "Your Orders", value: cardData.orders },
-          { icon: "fa-dollar-sign", label: "Deposit", value: `$${cardData.deposit}` },
-          { icon: "fa-exchange-alt", label: "Withdraw", value: `$${cardData.withdraw}` },
+          { icon: "fa-dollar-sign", label: "Deposit", value: `π ${cardData.deposit}` },
+          { icon: "fa-exchange-alt", label: "Withdraw", value: `π ${cardData.withdraw}` },
           { icon: "fa-ticket-alt", label: "Your Ticket", value: cardData.ticket },
         ].map((item, index) => (
           <div

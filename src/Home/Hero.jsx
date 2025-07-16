@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const [transactions, setTransactions] = useState([
-    { type: 'Send Money', amount: -656.02 },
-    { type: 'Cashout', amount: -120.02 },
+    { type: 'Send Money', amount: 656.02 },
+    { type: 'Cashout', amount: 120.02 },
     { type: 'Add Money', amount: 250.0 },
   ]);
 
@@ -105,7 +105,7 @@ const Hero = () => {
       <section className="walletsection">
         <div className="walletinfo">
           <h3>Your Wallet Balance</h3>
-          <h1>${totalBalance.toFixed(2)}</h1>
+          <h1>π {totalBalance.toFixed(2)}</h1>
         </div>
         <div className="walletactions">
           <button onClick={handleSend}>
@@ -159,7 +159,7 @@ const Hero = () => {
               <small>{transaction.type}</small>
             </div>
             <p className={`amount ${transaction.amount < 0 ? 'negative' : 'positive'}`}>
-              {transaction.amount < 0 ? '-' : '+'} ${Math.abs(transaction.amount).toFixed(2)}
+              {transaction.amount < 0 ? '-' : '+'} π {Math.abs(transaction.amount).toFixed(2)}
             </p>
           </div>
         ))}
@@ -201,7 +201,7 @@ const Hero = () => {
                   onChange={(e) => setAmount(e.target.value)}
                   required
                 />
-                <p>Transaction Fee: 1.00pi</p>
+                <p>Transaction Fee: 0.5pi</p>
                 <button onClick={handleTransaction} disabled={!recipient || !network || !amount}>Send</button>
                 <button onClick={() => setShowSendPopup(false)}>Cancel</button>
               </>

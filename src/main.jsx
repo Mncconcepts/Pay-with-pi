@@ -31,6 +31,7 @@ import TermsConditions from './Components/Navbar/TermsConditions.jsx';
 import Spinner from './Components/Navbar/Spinner.jsx';
 import ForgotPassword from './Components/Navbar/ForgotPassword.jsx';
 import Admin from './Admin/Admin.jsx';
+import Passkey from './Components/Navbar/Passkey.jsx';
 
 
 
@@ -94,6 +95,10 @@ const router = createHashRouter([
       {
         path: "/admin",
         element: <Admin/>
+      },
+      {
+        path: "/passkey",
+        element: <Passkey/>
       }
 
     ],
