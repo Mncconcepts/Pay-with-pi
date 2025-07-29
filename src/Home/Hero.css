@@ -72,6 +72,7 @@
   color: white;
   text-align: center;
   margin-bottom: 1rem;
+ padding: 2rem;
 }
 
 .walletinfo h1 {
@@ -168,7 +169,7 @@
 
   .walletsection {
     font-size: 0.9rem;
-    padding: 0.5rem;
+    padding: 1.5rem;
   }
 
   .walletactions button {

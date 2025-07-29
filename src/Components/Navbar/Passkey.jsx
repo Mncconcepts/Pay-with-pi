@@ -79,11 +79,11 @@ const styles = {
     height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '1rem',
+    padding: '4rem',
   },
   card: {
     backgroundColor: '#fff',
-    padding: '2rem',
+    padding: '5rem 4rem',
     borderRadius: '8px',
     boxShadow: '0 4px 12px rgba(0,0,0,0.04)',
     textAlign: 'center',
@@ -93,11 +93,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    margintop: "-9rem",
   },
   input: {
     width: '100%',
-    padding: '0.75rem',
+    padding: '0.75rem 2rem',
     margin: '1rem 0',
     fontSize: '1rem',
     border: '1px solid #ccc',
@@ -115,7 +114,7 @@ const styles = {
     borderRadius: '4px',
     cursor: 'pointer',
     position: 'relative',
-    whiteSpace: 'nowrap', // Keep text in one line
+    whiteSpace: 'nowrap',
   },
   alert: {
     padding: '0.75rem',

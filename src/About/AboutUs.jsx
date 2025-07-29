@@ -8,8 +8,8 @@ const AboutUs = () => {
             {/* Hero Section */}
             <div className="hero-section">
                 <div data-aos="fade-left" className="hero-text">
-                    <h1 className="pt-5">
-                        About Us <hr />
+                    <h1 className="pt-5 ">
+                        About Us
                     </h1>
                     <p>
                         Paywith-pi is a revolutionary online platform

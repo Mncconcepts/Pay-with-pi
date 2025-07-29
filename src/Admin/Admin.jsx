@@ -134,10 +134,10 @@ const Admin = () => {
                             <>
                                 <h2 className="text-center mt-3">Pending Orders</h2>
                                 <p>These orders are waiting for approval.</p>
-                                <p><strong>Order ID:</strong> #12345</p>
-                                <p><strong>Customer:</strong> Jane Doe</p>
-                                <p><strong>Status:</strong> Pending</p>
-                                <p><strong>Total:</strong> $120</p>
+                                <p className="text-start"><strong>Order ID:</strong> #12345</p>
+                                <p className="text-start"><strong>Customer:</strong> Jane Doe</p>
+                                <p className="text-start"><strong>Status:</strong> Pending</p>
+                                <p className="text-start"><strong>Total:</strong> $120</p>
                             </>
                         )}
 
@@ -145,10 +145,10 @@ const Admin = () => {
                             <>
                                 <h2 className="text-center mt-3">Completed Orders</h2>
                                 <p>These orders have been successfully processed.</p>
-                                <p><strong>Order ID:</strong> #67890</p>
-                                <p><strong>Customer:</strong> Mark Smith</p>
-                                <p><strong>Status:</strong> Completed</p>
-                                <p><strong>Total:</strong> $250</p>
+                                <p className="text-start"><strong>Order ID:</strong> #67890</p>
+                                <p className="text-start"><strong>Customer:</strong> Mark Smith</p>
+                                <p className="text-start"><strong>Status:</strong> Completed</p>
+                                <p className="text-start"><strong>Total:</strong> $250</p>
                             </>
                         )}
 
@@ -156,14 +156,14 @@ const Admin = () => {
                             <>
                                 <h2 className="text-center mt-3">Cancelled Orders</h2>
                                 <p>These orders were cancelled by the customer.</p>
-                                <p><strong>Order ID:</strong> #54321</p>
-                                <p><strong>Customer:</strong> Emma Johnson</p>
-                                <p><strong>Status:</strong> Cancelled</p>
-                                <p><strong>Total:</strong> $75</p>
+                                <p className="text-start"><strong>Order ID:</strong> #54321</p>
+                                <p className="text-start"><strong>Customer:</strong> Emma Johnson</p>
+                                <p className="text-start"><strong>Status:</strong> Cancelled</p>
+                                <p className="text-start"><strong>Total:</strong> $75</p>
                             </>
                         )}
 
-                        <button className="close-btn" onClick={handleClosePopup}>Close</button>
+                        <button className="close-btn w-100" onClick={handleClosePopup}>Close</button>
                     </div>
                 </div>
             )}

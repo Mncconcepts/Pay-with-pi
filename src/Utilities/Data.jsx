@@ -103,7 +103,7 @@ const Data = () => {
         </div>
 
         <section>
-          <h3 className="mt-3 mb-3">Exclusive Data Deals</h3>
+          <h6 className="mt-3 mb-3 text-center">Exclusive Data Deals</h6>
           <div className="top-up-card">
             {[{ amount: 50, airtime: '₦50' }, { amount: 100, airtime: '₦100' }, { amount: 200, airtime: '₦200' }, { amount: 500, airtime: '₦500' }, { amount: 1000, airtime: '₦1000' }, { amount: 2000, airtime: '₦2000' }].map((bundle, index) => (
               <div className="cards" key={index} onClick={() => setAmount(bundle.amount)}>
@@ -115,11 +115,11 @@ const Data = () => {
 
           <div className="custom-amount">
             <input type="number" placeholder="₦50-500,000" value={amount} onChange={handleAmountChange} />
-            <button onClick={() => setShowPopup(true)}>Pay</button>
+            <button className='p-3' onClick={() => setShowPopup(true)}>Pay</button>
           </div>
         </section>
         <section className="airtimes-service">
-          <h2 className="mt-3 mb-1">Data Service</h2>
+          <h6 className="mt-5 text-center mb-1">Data Service</h6>
           <div className="services-item mt-3">
             <div className="services-icon">USSD</div>
             <div className="services-text">

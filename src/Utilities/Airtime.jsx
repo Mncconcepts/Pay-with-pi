@@ -42,7 +42,7 @@ const Airtime = () => {
         <div className="wallet-slider">
           <div className="wallet-slide">
             <div className="wallet-info slide-in">
-              <h2>Top Airtime Bundles Just For You</h2>
+              <h2>Top Airtime Bundles For You</h2>
               <h6>Save More with Every Purchase</h6>
               <button className="btn btn-success" type="submit">See Offer</button>
             </div>
@@ -52,7 +52,7 @@ const Airtime = () => {
           </div>
           <div className="wallet-slide">
             <div className="wallet-info slide-in">
-              <h2>Recharge Airtime For Tomorrow.</h2>
+              <h2>Recharge More For Tomorrow.</h2>
               <h6>Save More With Our Sure Plan</h6>
               <button className="btn btn-success" type="submit">See Offer</button>
             </div>
@@ -109,7 +109,7 @@ const Airtime = () => {
         </div>
 
         <section>
-          <h3 className="mt-3 mb-3">Exclusive Airtime Bundles</h3>
+          <h6 className="mt-3 mb-3 text-center">Exclusive Airtime Bundles</h6>
           <div className="top-up-card">
             {[{ amount: 50, airtime: '₦50' }, { amount: 100, airtime: '₦100' }, { amount: 200, airtime: '₦200' }, { amount: 500, airtime: '₦500' }, { amount: 1000, airtime: '₦1000' }, { amount: 2000, airtime: '₦2000' }].map((bundle, index) => (
               <div className="cards" key={index} onClick={() => setAmount(bundle.amount)}>
@@ -121,12 +121,12 @@ const Airtime = () => {
 
           <div className="custom-amount">
             <input type="number" placeholder="₦50-500,000" value={amount} onChange={handleAmountChange} />
-            <button onClick={() => setShowPopup(true)}>Pay</button>
+            <button className='p-3 ' onClick={() => setShowPopup(true)}>Pay</button>
           </div>
         </section>
 
         <section className="airtimes-service">
-          <h2 className="mt-3 mb-1">Airtime Service</h2>
+          <h6 className="mt-5 mb-1 text-center">Airtime Service</h6>
           <div className="services-item mt-3">
             <div className="services-icon">USSD</div>
             <div className="services-text">

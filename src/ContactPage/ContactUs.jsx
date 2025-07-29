@@ -78,7 +78,7 @@ const ContactUs = () => {
                 <div data-aos="zoom-in" className='det'>
                     <h2>Get In Touch</h2>
                 </div>
-                <h5 className='mt-3'>Need help? Send Us Messages Now, We Are Eager and Ready To Hear From You</h5>
+                <h6 className='mt-1'>Need help? Send Us Messages Now, We Are Eager and Ready To Hear From You</h6>
                 <div className="contact-info">
                     {contactInfo.map((info, index) => (
                         <div className="info-item" key={index}>
